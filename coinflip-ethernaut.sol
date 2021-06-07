@@ -39,6 +39,7 @@ contract getResult {
     uint256 FACTOR = 57896044618658097711785492504343953926634992332820282019728792003956564819968;
     using SafeMath for uint256;
  function exec() public {
+ //change the address
      CoinFlip cf = CoinFlip(0x4B078Ce073ab869dBEC091eb9a4198c821D30dcE);
      cf.flip(uint256((blockhash(block.number.sub(1)))).div(FACTOR)==1);
  }
